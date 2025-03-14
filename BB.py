@@ -86,7 +86,7 @@ else:
     st.write(f"## 🌟 คุณคือ **{personality}**")
 
     # ---------- ปุ่มแชร์ ----------
-    share_url = "https://my-personality-app-bqdzxpdhwrxs2y69jpaysh.streamlit.app/"
+    share_url = "https://soulsage-personal-app.streamlit.app/"
     st.subheader("📢 แชร์ผลลัพธ์ของคุณ")
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
     st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์")
