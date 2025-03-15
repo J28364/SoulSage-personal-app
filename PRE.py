@@ -105,23 +105,28 @@ journey = [
 if "step" not in st.session_state:
     st.session_state.step = 0
     st.session_state.responses = []
+    st.session_state.selected_option = ""
 
 # ---------- Flow: คำโปรย -> คำถาม ----------
-if st.session_state.step < len(journey) * 2:
-    index = st.session_state.step // 2
-    if st.session_state.step % 2 == 0:
-        st.write(f"### {journey[index]['intro']}")
-    else:
-        st.write(f"## {journey[index]['question']}")
-        response = st.radio("", journey[index]["options"], key=f"q{index}")
-        if response:
-            st.session_state.responses.append(response)
-
-    st.markdown("<div class='button-container'>", unsafe_allow_html=True)
+if st.session_state.step < len(intro_texts) + len(questions):
+    if st.session_state.step % 2 == 0:  # แสดงคำโปรย
+        intro_index = st.session_state.step // 2
+        st.markdown(f'<div class="intro-text">{intro_texts[intro_index]}</div>', unsafe_allow_html=True)
+    else:  # แสดงคำถาม
+        q_index = st.session_state.step // 2
+        q_data = questions[q_index]
+        st.markdown(f'<div class="question">{q_data["question"]}</div>', unsafe_allow_html=True)
+        for option in q_data["options"]:
+            if st.button(option, key=f"{q_index}_{option}"):
+                st.session_state.responses.append(option)
+                st.session_state.step += 1
+                st.rerun()
+    
     if st.button("🔮 ต่อไป"):
         st.session_state.step += 1
         st.rerun()
-    st.markdown("</div>", unsafe_allow_html=True)
+    
+st.stop()
 
 # ---------- แสดงผลลัพธ์ ----------
 else:
