@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://img.freepik.com/free-vector/gold-moon-sun-border-black-background_53876-115066.jpg?ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
+        background-image: url("https://img.freepik.com/free-vector/mystical-gold-frame-black-background-mobile-phone-wallpaper_53876-136499.jpg");
         background-size: cover;
     }
     h1 {
