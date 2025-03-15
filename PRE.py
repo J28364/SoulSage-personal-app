@@ -126,10 +126,10 @@ if st.session_state.step < len(intro_texts) + len(questions):
         st.session_state.step += 1
         st.rerun()
     
-st.stop()
 
 # ---------- แสดงผลลัพธ์ ----------
 else:
+    st.write(f"## 🌟 คุณคือ **{personality}**")
     personalities = {
         "ผู้เฝ้าดู": 0,
         "นักเดินทาง": 0,
@@ -228,7 +228,7 @@ else:
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
     personality = max(personalities, key=personalities.get)
 
-    st.write(f"## 🌟 คุณคือ **{personality}**")
+    
 
     # ---------- ปุ่มแชร์ ----------
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
