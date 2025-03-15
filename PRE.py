@@ -7,26 +7,54 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://cdn-cm.freepik.com/previews/c632ef5e-ced1-4c8f-a876-61787f5c3fad.jpg?token=exp=1742033588~hmac=446b3363ad9acd2a0d2f6a01ccf5d8b42e3fa2daf5c38f4f182388c5099c44c2?w=500&h=500");
+        background-image: url("https://www.thestreetratchada.com/upload/contents/17084010569.jpg");
         background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     h1 {
-        color: #ffffff;
+        color: #ffcc00;
         text-align: center;
     }
     .question {
         font-size: 20px;
         font-weight: bold;
-        color: #ffffff;
+        color: #f5f5f5;
+        border: 2px solid #ffcc00;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+        text-align: center;
     }
     .option {
         font-size: 18px;
         color: #ffffff;
+        border: 2px solid #ffcc00;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        text-align: center;
     }
-    .button-container {
-        position: fixed;
-        bottom: 20px;
-        right: 60px;
+    .option:hover {
+        transform: scale(1.05);
+    }
+    .option.selected {
+        background-color: #ffcc00;
+        color: #000000;
+    }
+    .intro-text {
+        border: 2px solid #ffcc00;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
     }
     </style>
     """,
