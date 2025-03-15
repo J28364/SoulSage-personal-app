@@ -11,13 +11,13 @@ st.markdown(
         background-size: cover;
     }
     h1 {
-        color: #ffcc00;
+        color: #ffffff;
         text-align: center;
     }
     .question {
         font-size: 20px;
         font-weight: bold;
-        color: #f5f5f5;
+        color: #ffffff;
     }
     .option {
         font-size: 18px;
