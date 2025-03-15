@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://cdn-cm.freepik.com/previews/2ac1dedf-310c-4368-99a9-2f096c1d605b.jpg?token=exp=1742033341~hmac=5e08d547d71acdd5aa22443e7be795296eda0ba9f43084dfb2b2c9b8c0409bb3?w=500&h=500");
+        background-image: url("https://cdn-cm.freepik.com/previews/c632ef5e-ced1-4c8f-a876-61787f5c3fad.jpg?token=exp=1742033588~hmac=446b3363ad9acd2a0d2f6a01ccf5d8b42e3fa2daf5c38f4f182388c5099c44c2?w=500&h=500");
         background-size: cover;
     }
     h1 {
