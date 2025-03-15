@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://img.freepik.com/free-photo/sci-fi-fantasy-landscape_23-2151892583.jpg?ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
+        background-image: url("https://cdn-om.cdnpk.net/users/603/60393279/uploads/47ddc40e-66c0-44a5-bb8d-6a6522230167/47ddc40e-66c0-44a5-bb8d-6a6522230167-thumb.jpg?token=exp=1742117214~hmac=197225bd9ae54ea872fb40fa5b8b57b9");
         background-size: cover;
     }
     h1 {
