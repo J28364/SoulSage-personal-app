@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://img.freepik.com/free-vector/mystical-golden-frame-black-background-vector_53876-143636.jpg?t=st=1742024353~exp=1742027953~hmac=38013a16d639b8cd97bf237976f18df3c850bd73082183fdaf514b1af7a19b3f&w=1380");
+        background-image: url("https://img.freepik.com/free-vector/gold-moon-sun-border-black-background_53876-115066.jpg?ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
         background-size: cover;
     }
     h1 {
