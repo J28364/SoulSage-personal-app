@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://img.freepik.com/free-photo/gray-grunge-surface-wall-texture-background_1017-18216.jpg?uid=R60393279&ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
+        background-image: url("https://img.freepik.com/premium-photo/pitch-black-background-with-copy-space-abstract_1248375-3448.jpg?uid=R60393279&ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
