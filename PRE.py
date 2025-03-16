@@ -188,7 +188,7 @@ else:
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
     personality = max(personalities, key=personalities.get)
 
-     # เริ่มต้น div container สำหรับจัดกลาง
+    # เริ่มต้น div container สำหรับจัดกลาง
     st.markdown("<div style='display: flex;"
                 "flex-direction: column; "
                 "align-items: center;'>", unsafe_allow_html=True)
