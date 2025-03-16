@@ -19,7 +19,7 @@ st.markdown(
         font-size: 20px;
         font-weight: bold;
         color: #f5f5f5;
-        border: 2px solid #ffffff;
+        border: 2px solid #ffcc00;
         padding: 10px;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.5);
@@ -29,7 +29,7 @@ st.markdown(
     .option {
         font-size: 18px;
         color: #ffffff;
-        border: 2px solid #ffffff;
+        border: 2px solid #ffcc00;
         padding: 10px;
         border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.5);
@@ -195,33 +195,28 @@ else:
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
     personality = max(personalities, key=personalities.get)
 
-    # เริ่มต้น div container สำหรับจัดกลาง
-    st.markdown("<div style='display: flex;"
-                "flex-direction: column; "
-                "align-items: center;'>", unsafe_allow_html=True)
+   # เริ่มต้น div container สำหรับจัดกลาง
+    st.markdown("<div style='display: flex; flex-direction: column; align-items: center;'>", unsafe_allow_html=True)
 
     st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ '{personality}'</h2>", unsafe_allow_html=True)
 
+    st.markdown("<div style='display: flex; justify-content: center; margin-bottom: 10px;'>", unsafe_allow_html=True)
     image_filename = f"{personality}.jpg"
-    image_path = image_filename  # กำหนดค่าเริ่มต้นที่นี่
-
-    # จัดรูปภาพแทนบุคลิกให้อยู่ตรงกลางและเล็กลง
-    col1, col2, col3 = st.columns([1, 2, 1])  # สร้าง 3 คอลัมน์ อัตราส่วน 1:2:1
-    with col2:
-        try:
-            st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=150) # กำหนดขนาดความกว้าง
-        except FileNotFoundError:
-            st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
+    image_path = image_filename
+    try:
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=150)
+    except FileNotFoundError:
+        st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
+    st.markdown("</div>", unsafe_allow_html=True)
 
     # ---------- ปุ่มแชร์ ----------
     st.markdown("<h3 style='color: white; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
 
-    # จัด QR Code ให้อยู่ตรงกลางและเล็กลง
-    col4, col5, col6 = st.columns([1, 2, 1])  # สร้าง 3 คอลัมน์ อัตราส่วน 1:2:1
-    with col5:
-        st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์", width=150) # กำหนดขนาดความกว้าง
+    st.markdown("<div style='display: flex; justify-content: center;'>", unsafe_allow_html=True)
+    st.image(qr_code_url, caption="<p style='color: white; text-align: center;'>📱 สแกน QR Code เพื่อเปิดลิงก์</p>", width=150)
+    st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
     if st.button("🔄 เริ่มใหม่"):
