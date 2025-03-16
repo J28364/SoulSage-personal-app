@@ -245,7 +245,7 @@ else:
         "ผู้หลงลืม": " ",
         "ผู้ถือแสง": "file:///C:/Users/HP/Downloads/DALL%C2%B7E%202025-03-15%2014.25.31%20-%20A%20noble%20figure%20known%20as%20'The%20Lightbearer'%20standing%20on%20a%20rocky%20cliff%20at%20dawn,%20holding%20a%20radiant%20staff%20that%20glows%20with%20golden%20light.%20The%20figure%20wears%20fl.webp"
     }
-        
+    st.image(image_urls[personality], caption=f"บุคลิกของคุณ: {personality}")        
     
 
     # ---------- ปุ่มแชร์ ----------
