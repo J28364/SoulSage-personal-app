@@ -1,5 +1,5 @@
 import streamlit as st
-import random
+
 st.set_page_config(page_title="ค้นหาตัวตน", page_icon="🔑", layout="centered")
 
 # ---------- ธีม UI ----------
