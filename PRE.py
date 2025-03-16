@@ -125,7 +125,7 @@ if st.session_state.step < len(intro_texts) + len(questions):
     if st.button("🔮 ต่อไป"):
         st.session_state.step += 1
         st.rerun()
-    
+st.stop    
 
 # ---------- แสดงผลลัพธ์ ----------
 else:
