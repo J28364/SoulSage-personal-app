@@ -210,7 +210,7 @@ else:
     image_path = image_filename  # ปรับพาธถ้ารูปอยู่ในโฟลเดอร์อื่น เช่น "images/{image_filename}"
 
     try:
-        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", , width=100)
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=100)
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
