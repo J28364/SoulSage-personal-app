@@ -2,7 +2,6 @@ import streamlit as st
 import random
 from PIL import Image
 
-st.set_page_config(layout="wide")
 st.set_page_config(page_title="ค้นหาตัวตน", page_icon="🔑", layout="centered")
 
 try:
