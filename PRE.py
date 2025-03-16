@@ -209,11 +209,8 @@ else:
     image_filename = f"{personality}.jpg"
     image_path = image_filename
 
-    try:
-        with col1:
+    with col1:
             st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=150)
-    except FileNotFoundError:
-        st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
     with col2:
         if personality == "ผู้เฝ้าดู":
