@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://cdn-om.cdnpk.net/users/603/60393279/uploads/eb3a3349-2f8f-4920-8aa8-49e47d050eb2/eb3a3349-2f8f-4920-8aa8-49e47d050eb2-thumb.jpg?token=exp=1742193668~hmac=096f57a81c29299cbee41bada205a27f");
+        background-image: url("https://img.freepik.com/free-photo/golden-glow-lights-dark-background_23-2151831327.jpg?uid=R60393279&ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
