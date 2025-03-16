@@ -199,11 +199,11 @@ else:
 
     st.markdown(f"""
         <div style="
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
             color: #ffffff;
             border: 2px solid #ffcc00;
-            padding: 15px;
+            padding: 10px;
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
@@ -213,7 +213,7 @@ else:
         </div>
     """, unsafe_allow_html=True)
 
-    col1, col2 = st.columns([1, 2]) # สร้างสองคอลัมน์ โดยให้คอลัมน์รูปภาพมีขนาด 1 และคอลัมน์คำอธิบายมีขนาด 2
+    col1, col3 = st.columns([1, 3]) # สร้างสองคอลัมน์ โดยให้คอลัมน์รูปภาพมีขนาด 1 และคอลัมน์คำอธิบายมีขนาด 2
 
     image_filename = f"{personality}.jpg"
     image_path = image_filename
@@ -224,13 +224,13 @@ else:
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
-    with col2:
+    with col3:
         if personality in personality_descriptions:
             st.write(personality_descriptions[personality])
         else:
             st.write("ไม่มีคำอธิบายสำหรับบุคลิกนี้")
     # ---------- ปุ่มแชร์ ----------
-    st.markdown("<h3 style='color: white; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='color: white; font-size: 22px; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
     st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์", width = 150)  # เปลี่ยนตรงนี้
