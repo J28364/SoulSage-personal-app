@@ -180,7 +180,7 @@ else:
         "ฉันในแบบที่ฉันเป็น": "ผู้ถือแสง"
     }
 
-    # นับคะแนนของแต่ละบุคลิก
+   # นับคะแนนของแต่ละบุคลิก
     for response in st.session_state.responses:
         if response in mapping:
             personalities[mapping[response]] += 1
@@ -194,6 +194,9 @@ else:
                 "align-items: center;'>", unsafe_allow_html=True)
 
     st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ '{personality}'</h2>", unsafe_allow_html=True)
+
+    image_filename = f"{personality}.jpg"
+    image_path = image_filename  # กำหนดค่าเริ่มต้นที่นี่
 
     # จัดรูปภาพแทนบุคลิกให้อยู่ตรงกลางและเล็กลง
     col1, col2, col3 = st.columns([1, 2, 1])  # สร้าง 3 คอลัมน์ อัตราส่วน 1:2:1
