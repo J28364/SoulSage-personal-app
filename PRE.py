@@ -193,7 +193,7 @@ else:
                 "flex-direction: column; "
                 "align-items: center;'>", unsafe_allow_html=True)
 
-    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ "{personality}"</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ '{personality}'</h2>", unsafe_allow_html=True)
 
     # จัดรูปภาพแทนบุคลิกให้อยู่ตรงกลางและเล็กลง
     col1, col2, col3 = st.columns([1, 2, 1])  # สร้าง 3 คอลัมน์ อัตราส่วน 1:2:1
