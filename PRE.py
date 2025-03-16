@@ -11,10 +11,7 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
-    h1 {
-        color: #ffcc00;
-        text-align: center;
+    
     }
     .question {
         font-size: 20px;
@@ -60,8 +57,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.title("SoulSage")
-
+st.markdown("<h1 style='color: white; text-align: center;'>SoulSage</h1>", unsafe_allow_html=True)
 # ---------- คำถาม ----------
 journey = [
     {"intro": "🔮 คุณเคยได้ยินเสียงในใจที่เงียบกว่าคำพูดใดๆ หรือไม่? เสียงนั้นอาจเป็นคำตอบที่คุณเฝ้าตามหา",
@@ -193,23 +189,27 @@ else:
     personality = max(personalities, key=personalities.get)
 
     # เริ่มต้น div container สำหรับจัดกลาง
-    st.markdown("<div style='display: flex; flex-direction: column; align-items: center;'>", unsafe_allow_html=True)
+    st.markdown("<div style='display: flex;"
+                "flex-direction: column; "
+                "align-items: center;'>", unsafe_allow_html=True)
 
-    st.write(f"## 🌟 คุณคือ **{personality}**")
+    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ **{personality}**</h2>",
+                unsafe_allow_html=True)
 
     image_filename = f"{personality}.jpg"
     image_path = image_filename
 
     try:
-        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=200)
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", use_container_width=True)  # เปลี่ยนตรงนี้
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
     # ---------- ปุ่มแชร์ ----------
-    st.subheader("📢 แชร์ผลลัพธ์ของคุณ")
+    st.markdown("<h3 style='color: white; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
-    st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์")
+    st.image(qr_code_url, caption="<p style='color: white; text-align: center;'>📱 สแกน QR Code เพื่อเปิดลิงก์</p>",
+             use_container_width=True)  # เปลี่ยนตรงนี้
 
     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
     if st.button("🔄 เริ่มใหม่"):
