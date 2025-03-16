@@ -105,7 +105,7 @@ journey = [
 if "step" not in st.session_state:
     st.session_state.step = 0
     st.session_state.responses = []
-    st.session_state.selected_option = ""
+    st.session_state.selected_option_index = None # เก็บ index ของตัวเลือกที่ถูกเลือก
 
 # ---------- Flow: คำโปรย -> คำถาม ----------
 if st.session_state.step < len(journey) * 2:
@@ -114,15 +114,25 @@ if st.session_state.step < len(journey) * 2:
         st.markdown(f'<div class="intro-text">{journey[intro_index]["intro"]}</div>', unsafe_allow_html=True)
         if st.button("🔮 ต่อไป"):
             st.session_state.step += 1
+            st.session_state.selected_option_index = None # รีเซ็ตเมื่อไปหน้าใหม่
             st.rerun()
     else:  # แสดงคำถาม
         q_index = st.session_state.step // 2
         q_data = journey[q_index]
         st.markdown(f'<div class="question">{q_data["question"]}</div>', unsafe_allow_html=True)
-        for option in q_data["options"]:
+        options = q_data["options"]
+        for i, option in enumerate(options):
             if st.button(option, key=f"{q_index}_{option}"):
-                st.session_state.responses.append(option)
+                st.session_state.selected_option_index = i # บันทึก index ของตัวเลือก
+                st.session_state.selected_option = option # บันทึกตัวเลือกที่เลือก
+                # ไม่ต้อง rerun ที่นี่
+
+        if st.session_state.selected_option_index is not None:
+            st.write(f"คุณเลือก: {options[st.session_state.selected_option_index]}")
+            if st.button("🔮 ต่อไป"):
+                st.session_state.responses.append(options[st.session_state.selected_option_index])
                 st.session_state.step += 1
+                st.session_state.selected_option_index = None # รีเซ็ตเมื่อไปหน้าใหม่
                 st.rerun()
 
 
