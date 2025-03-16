@@ -214,7 +214,7 @@ else:
     # จัด QR Code ให้อยู่ตรงกลางและเล็กลง
     col4, col5, col6 = st.columns([1, 2, 1])  # สร้าง 3 คอลัมน์ อัตราส่วน 1:2:1
     with col5:
-        st.image(qr_code_url, caption=(f"<p style='color: white; text-align: center;'>📱 สแกน QR Code เพื่อเปิดลิงก์</p>", width=150) # กำหนดขนาดความกว้าง
+        st.image(qr_code_url, caption=((f"<p style='color: white; text-align: center;'>📱 สแกน QR Code เพื่อเปิดลิงก์</p>"), width=150) # กำหนดขนาดความกว้าง
 
     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
     if st.button("🔄 เริ่มใหม่"):
