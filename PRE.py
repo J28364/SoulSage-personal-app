@@ -188,8 +188,21 @@ else:
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
     personality = max(personalities, key=personalities.get)
 
-    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ {personality}</h2>",
-                unsafe_allow_html=True)
+    st.markdown(f"""
+        <div style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            border: 2px solid #ffcc00;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            text-align: center;
+        ">
+            🌟 คุณคือ {personality}
+        </div>
+    """, unsafe_allow_html=True)
 
     image_filename = f"{personality}.jpg"
     image_path = image_filename
