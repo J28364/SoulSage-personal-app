@@ -230,7 +230,7 @@ else:
 
     # นับคะแนนของแต่ละบุคลิก
    for response in st.session_state.responses:
-        if response in mapping:
+       if response in mapping:
             personalities[mapping[response]] += 1
 
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
