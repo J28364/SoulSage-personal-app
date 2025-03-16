@@ -40,8 +40,8 @@ st.markdown(
         transform: scale(1.05);
     }
     .option.selected {
-        background-color: #ffcc00;
-        color: #000000;
+        background-color: #9933FF;
+        color: #3c3c3c;
     }
     .intro-text {
         border: 2px solid #ffcc00;
