@@ -108,17 +108,17 @@ if "step" not in st.session_state:
     st.session_state.selected_option = ""
 
 # ---------- Flow: คำโปรย -> คำถาม ----------
-if st.session_state.step < len("intro") + len(questions):
+if st.session_state.step < len("intro") + len("questions"):
     if st.session_state.step % 2 == 0:  # แสดงคำโปรย
         intro_index = st.session_state.step // 2
         st.markdown(f'<div class="intro-text">{"intro"[intro_index]}</div>', unsafe_allow_html=True)
     else:  # แสดงคำถาม
         q_index = st.session_state.step // 2
-        q_data = questions[q_index]
+        q_data = "questions"[q_index]
         st.markdown(f'<div class="question">{q_data["question"]}</div>', unsafe_allow_html=True)
         for option in q_data["options"]:
-            if st.button(option, key=f"{q_index}_{option}"):
-                st.session_state.responses.append(option)
+            if st.button("option", key=f"{q_index}_{option}"):
+                st.session_state.responses.append("option")
                 st.session_state.step += 1
                 st.rerun()
     
