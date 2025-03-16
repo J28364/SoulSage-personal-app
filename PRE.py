@@ -19,7 +19,7 @@ st.markdown(
         font-size: 20px;
         font-weight: bold;
         color: #f5f5f5;
-        border: 2px solid #ffcc00;
+        border: 2px solid #ffffff;
         padding: 10px;
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.5);
@@ -29,7 +29,7 @@ st.markdown(
     .option {
         font-size: 18px;
         color: #ffffff;
-        border: 2px solid #ffcc00;
+        border: 2px solid #ffffff;
         padding: 10px;
         border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.5);
