@@ -208,13 +208,7 @@ else:
     image_path = image_filename
 
     try:
-        st.markdown(f"""
-            <div style="text-align: center;">
-                <img src="{image_path}" alt="ภาพแทนบุคลิกของ {personality}" width="150" style="margin-left: 20px;">
-                <p style="color: white; margin-top: 5px;">ภาพแทนบุคลิกของ {personality}</p>
-            </div>
-        """, unsafe_allow_html=True)
-        # st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width = 150)  # บรรทัดเดิม
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width = 150)  # เปลี่ยนตรงนี้
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
