@@ -53,6 +53,11 @@ st.markdown(
         margin-bottom: 20px;
         text-align: center;
     }
+    .centered-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
     </style>
     """,
     unsafe_allow_html=True
