@@ -1,21 +1,15 @@
 import streamlit as st
 import random
-from PIL import Image
 
 st.set_page_config(page_title="ค้นหาตัวตน", page_icon="🔑", layout="centered")
 
-try:
-    bg_image = Image.open("Background.jpeg") # เปลี่ยนเป็นพาธของรูปภาพคุณ
-    st.image(bg_image, use_column_width=True, output_format='JPEG')
-except FileNotFoundError:
-    st.error("ไม่พบไฟล์รูปภาพพื้นหลัง")
     
 # ---------- ธีม UI ----------
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://img.freepik.com/free-photo/golden-glow-lights-dark-background_23-2151831327.jpg?uid=R60393279&ga=GA1.1.1470301244.1741927351&semt=ais_hybrid");
+        background-image: url("https://pikaso.cdnpk.net/private/production/1653553668/render.jpeg?token=exp=1747526400~hmac=24683ed6f92a119acac82257ad44b1265732ded83b4f27c0b8ba1e708f517a22&preview=1");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
