@@ -111,7 +111,7 @@ if "step" not in st.session_state:
 if st.session_state.step < len(intro) + len(questions):
     if st.session_state.step % 2 == 0:  # แสดงคำโปรย
         intro_index = st.session_state.step // 2
-        st.markdown(f'<div class="intro-text">{intro[intro_index]}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="intro-text">{"intro"[intro_index]}</div>', unsafe_allow_html=True)
     else:  # แสดงคำถาม
         q_index = st.session_state.step // 2
         q_data = questions[q_index]
