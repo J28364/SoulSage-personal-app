@@ -1,15 +1,13 @@
 import streamlit as st
 import random
-
 st.set_page_config(page_title="ค้นหาตัวตน", page_icon="🔑", layout="centered")
 
-    
 # ---------- ธีม UI ----------
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://pikaso.cdnpk.net/private/production/1653553668/render.jpeg?token=exp=1747526400~hmac=24683ed6f92a119acac82257ad44b1265732ded83b4f27c0b8ba1e708f517a22&preview=1");
+        background-image: url("https://cdn-om.cdnpk.net/users/603/60393279/uploads/eb3a3349-2f8f-4920-8aa8-49e47d050eb2/eb3a3349-2f8f-4920-8aa8-49e47d050eb2-thumb.jpg?token=exp=1742193668~hmac=096f57a81c29299cbee41bada205a27f");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -54,11 +52,6 @@ st.markdown(
         font-size: 18px;
         margin-bottom: 20px;
         text-align: center;
-    }
-    .centered-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
     </style>
     """,
@@ -187,7 +180,7 @@ else:
         "ฉันในแบบที่ฉันเป็น": "ผู้ถือแสง"
     }
 
-   # นับคะแนนของแต่ละบุคลิก
+    # นับคะแนนของแต่ละบุคลิก
     for response in st.session_state.responses:
         if response in mapping:
             personalities[mapping[response]] += 1
@@ -195,28 +188,27 @@ else:
     # ค้นหาบุคลิกที่ได้คะแนนสูงสุด
     personality = max(personalities, key=personalities.get)
 
-   # เริ่มต้น div container สำหรับจัดกลาง
-    st.markdown("<div style='display: flex; flex-direction: column; align-items: center;'>", unsafe_allow_html=True)
+    # เริ่มต้น div container สำหรับจัดกลาง
+    st.markdown("<div style='display: flex;"
+                "flex-direction: column; "
+                "align-items: center;'>", unsafe_allow_html=True)
 
-    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ '{personality}'</h2>", unsafe_allow_html=True)
+    st.markdown(f"<h2 style='color: white; text-align: center;'>🌟 คุณคือ {personality}</h2>",
+                unsafe_allow_html=True)
 
-    st.markdown("<div style='display: flex; justify-content: center; margin-bottom: 10px;'>", unsafe_allow_html=True)
     image_filename = f"{personality}.jpg"
     image_path = image_filename
+
     try:
-        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width=150)
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}")  # เปลี่ยนตรงนี้
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
-    st.markdown("</div>", unsafe_allow_html=True)
 
     # ---------- ปุ่มแชร์ ----------
     st.markdown("<h3 style='color: white; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
-
-    st.markdown("<div style='display: flex; justify-content: center;'>", unsafe_allow_html=True)
-    st.image(qr_code_url, caption="<p style='color: white; text-align: center;'>📱 สแกน QR Code เพื่อเปิดลิงก์</p>", width=150)
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์")  # เปลี่ยนตรงนี้
 
     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
     if st.button("🔄 เริ่มใหม่"):
