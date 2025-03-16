@@ -195,7 +195,7 @@ else:
     image_path = image_filename
 
     try:
-        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}")  # เปลี่ยนตรงนี้
+        st.image(image_path, caption=f"ภาพแทนบุคลิกของ {personality}", width = 150)  # เปลี่ยนตรงนี้
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
@@ -203,7 +203,7 @@ else:
     st.markdown("<h3 style='color: white; text-align: center;'>📢 แชร์ผลลัพธ์ของคุณ</h3>", unsafe_allow_html=True)
     share_url = "https://soulsage-personal-app-happy-day.streamlit.app/"
     qr_code_url = f"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={share_url}"
-    st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์")  # เปลี่ยนตรงนี้
+    st.image(qr_code_url, caption="📱 สแกน QR Code เพื่อเปิดลิงก์", width = 150)  # เปลี่ยนตรงนี้
 
     st.markdown("<div class='button-container'>", unsafe_allow_html=True)
     if st.button("🔄 เริ่มใหม่"):
