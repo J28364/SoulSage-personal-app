@@ -128,9 +128,6 @@ if st.session_state.step < len(journey) * 2:
                 st.session_state.responses.append(option)
                 st.session_state.step += 1
                 st.rerun()
-        if st.button("⬅️ ย้อนกลับ"):
-            st.session_state.step -= 1
-            st.rerun()
 
 
 else:
