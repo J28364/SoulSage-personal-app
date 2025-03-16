@@ -204,7 +204,7 @@ else:
         </div>
     """, unsafe_allow_html=True)
 
-    col1, col3 = st.columns([1, 3]) # สร้างสองคอลัมน์ โดยให้คอลัมน์รูปภาพมีขนาด 1 และคอลัมน์คำอธิบายมีขนาด 2
+    col1, col2 = st.columns([1, 2]) # สร้างสองคอลัมน์ โดยให้คอลัมน์รูปภาพมีขนาด 1 และคอลัมน์คำอธิบายมีขนาด 2
 
     image_filename = f"{personality}.jpg"
     image_path = image_filename
@@ -215,7 +215,7 @@ else:
     except FileNotFoundError:
         st.error(f"ไม่พบรูปภาพสำหรับบุคลิก: {personality}")
 
-    with col3:
+    with col2:
         if personality == "ผู้เฝ้าดู":
             st.write("เป็นผู้ที่เข้าใจทุกสิ่งแต่ไม่จำเป็นต้องเข้าไปเปลี่ยนแปลง ฉลาด ลึกซึ้ง มองเห็นความเป็นไปของโลกอย่างลึกซึ้ง อาจเต็มไปด้วยความลึกลับ โดดเดี่ยว หรือมีหน้าที่ที่ต้องแบกรับ")
         elif personality == "นักเดินทาง":
