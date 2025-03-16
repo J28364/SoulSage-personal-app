@@ -238,14 +238,14 @@ else:
 
     st.write(f"## 🌟 คุณคือ **{personality}**")
     image_urls = {
-        "ผู้เฝ้าดู": " ",
-        "นักเดินทาง": " ",
-        "ผู้รังสรรค์": " ",
-        "นักรบเงา": "https://lh3.googleusercontent.com/gg-dl/AA8i_VLguUzHEOFOsnTxzVNk2bUs9tVDuNP9KS3COtsEa_P9lE170i0ycgU5nDzhPRvtXMtCXime2UGuZVlG-nKHiO5mCwDQd7QKit5RlkK8w-rgrNRnA3afzVI-E52riS1I8Ipiqk2iRijk7IUt4yXVPrOyRz3HPx54O9rqpw17ICZNz-vb",
-        "ผู้หลงลืม": " ",
-        "ผู้ถือแสง": "file:///C:/Users/HP/Downloads/DALL%C2%B7E%202025-03-15%2014.25.31%20-%20A%20noble%20figure%20known%20as%20'The%20Lightbearer'%20standing%20on%20a%20rocky%20cliff%20at%20dawn,%20holding%20a%20radiant%20staff%20that%20glows%20with%20golden%20light.%20The%20figure%20wears%20fl.webp"
+        "ผู้เฝ้าดู.jpg",
+        "นักเดินทาง.jpg",
+        "ผู้รังสรรค์.jpg",
+        "นักรบเงา.gpg",
+        "ผู้หลงลืม.jpg",
+        "ผู้ถือแสง.jpg"
     }
-    st.image(image_urls[personality], caption=f"บุคลิกของคุณ: {personality}")        
+    st.image(f"{result}.jpg", caption=f"ภาพแทนบุคลิกของ {result}")        
     
 
     # ---------- ปุ่มแชร์ ----------
