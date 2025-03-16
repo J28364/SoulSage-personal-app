@@ -112,10 +112,6 @@ if st.session_state.step < len(journey) * 2:
     if st.session_state.step % 2 == 0:  # แสดงคำโปรย
         intro_index = st.session_state.step // 2
         st.markdown(f'<div class="intro-text">{journey[intro_index]["intro"]}</div>', unsafe_allow_html=True)
-        if st.session_state.step > 0:
-            if st.button("⬅️ ย้อนกลับ"):
-                st.session_state.step -= 1
-                st.rerun()
         if st.button("🔮 ต่อไป"):
             st.session_state.step += 1
             st.rerun()
