@@ -41,7 +41,7 @@ st.markdown(
     }
     .option.selected {
         background-color: #9933FF;
-        color: #BEBEBE;
+        color: #ffffff;
     }
     .intro-text {
         border: 2px solid #ffcc00;
