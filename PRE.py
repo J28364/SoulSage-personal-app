@@ -7,7 +7,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://www.thestreetratchada.com/upload/contents/17084010569.jpg");
+        background-image: url("https://cdn-om.cdnpk.net/users/603/60393279/uploads/eb3a3349-2f8f-4920-8aa8-49e47d050eb2/eb3a3349-2f8f-4920-8aa8-49e47d050eb2-thumb.jpg?token=exp=1742193668~hmac=096f57a81c29299cbee41bada205a27f");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -237,7 +237,15 @@ else:
     personality = max(personalities, key=personalities.get)
 
     st.write(f"## 🌟 คุณคือ **{personality}**")
-    # ... (ส่วนที่เหลือของการแสดงผลลัพธ์)
+    image_urls = {
+        "ผู้เฝ้าดู": " ",
+        "นักเดินทาง": " ",
+        "ผู้รังสรรค์": " ",
+        "นักรบเงา": "https://lh3.googleusercontent.com/gg-dl/AA8i_VLguUzHEOFOsnTxzVNk2bUs9tVDuNP9KS3COtsEa_P9lE170i0ycgU5nDzhPRvtXMtCXime2UGuZVlG-nKHiO5mCwDQd7QKit5RlkK8w-rgrNRnA3afzVI-E52riS1I8Ipiqk2iRijk7IUt4yXVPrOyRz3HPx54O9rqpw17ICZNz-vb",
+        "ผู้หลงลืม": " ",
+        "ผู้ถือแสง": "file:///C:/Users/HP/Downloads/DALL%C2%B7E%202025-03-15%2014.25.31%20-%20A%20noble%20figure%20known%20as%20'The%20Lightbearer'%20standing%20on%20a%20rocky%20cliff%20at%20dawn,%20holding%20a%20radiant%20staff%20that%20glows%20with%20golden%20light.%20The%20figure%20wears%20fl.webp"
+    }
+        
     
 
     # ---------- ปุ่มแชร์ ----------
